@@ -3,8 +3,8 @@ import mill.scalalib._
 import publish._
 import $ivy.`de.tototec::de.tobiasroeser.mill.integrationtest:0.3.3`
 import de.tobiasroeser.mill.integrationtest._
-import $ivy.`de.tototec::de.tobiasroeser.mill.vcs.version_mill0.7:0.1.2`
-import de.tobiasroeser.mill.vcs.version.VcsVersion
+//import $ivy.`de.tototec::de.tobiasroeser.mill.vcs.version_mill0.7:0.1.2`
+//import de.tobiasroeser.mill.vcs.version.VcsVersion
 import mill.api.Loose
 
 val baseDir = build.millSourcePath
@@ -63,7 +63,7 @@ class AntlrCross(val millPlatform: String) extends CrossScalaModule with Publish
 
   override def pomSettings = PomSettings(
     description = "Antlr support for mill builds.",
-    organization = "co.actioniq",
+    organization = "co.actioniq.mill",
     url = "https://github.com/ActionIQ/mill-antlr",
     licenses = Seq(License.MIT),
     versionControl = VersionControl.github("ActionIQ", "mill-antlr"),
